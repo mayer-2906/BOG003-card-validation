@@ -3,11 +3,39 @@
   <head>
     <meta charset="utf-8">
     <title>Tarjeta de crédito válida</title>
+    <!--<link rel ="stylesheet" href="normalize.css"/>-->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
+    
   </head>
   <body>
-    <header></header>
-    <main></main>
+    <header>
+      <div class="logo">
+        <h1 >My Sweet Sebastian</h1>
+        <span  id="tienda">Dessert Shop</span>
+      </div>      
+    </header>
+    <main>
+      <section class="tortas">
+        <nav class="menu" >
+          <a href="index.html">Tortas</a>
+          <a href="*">Postres</a>
+          <a href="*">Contactos</a>
+          <a href="*" onclick="mostrarCarrito()"> <img src="../src/imagenes/bx-cart.svg" alt="Carrito"></a>
+        </nav>
+      </section>
+      <section class="postres">
+        <div class="productPostres">
+
+        </div>
+      </section>
+      <section class="carrito">
+        <label>Numero de Tarjeta</label>
+        <input type="number" placeholder="################">
+      </section>
+
+    </main>
     <footer></footer>
     <script src="index.js" type="module"></script>
   </body>

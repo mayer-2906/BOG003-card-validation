@@ -1,0 +1,72 @@
+:root{
+
+    --color-fondo:#F7E0FF;
+    --color-titulo: rgb(167 86 195 / 76%);
+    --blanco:#ffffff;
+    --negro:#000000;
+    --color-secciones:#C4C4C4;
+
+}
+
+html{
+
+    font-size: 62.5%;
+    font-family: 'Lobster', cursive;
+    
+}
+
+body{
+    background: var(--color-fondo);
+    font-size: 16px;/*1rem = 10px*/
+
+}
+
+
+.logo{
+    
+    text-align: center;
+    /*width: 120rem;*/
+    height: 13rem; 
+	background-image: url("/src/imagenes/logo.jfif");
+    background-position-x: center;
+    background-position-y: center;
+    padding: 0.5rem;
+    border-color: rgb(167, 86, 195);
+    border-width: 1rem;
+    border-style: double;
+    margin-left: auto;
+    margin-right: auto; 
+    text-shadow: black 3px 3px, black -3px 3px,black 3px -3px, black -3px -3px;   
+    
+}
+h1{
+   
+    text-align: center;    
+    /*font-family: 'Dancing Script', cursive;*/
+    /*text-transform: uppercase;*/
+    color: var(--color-titulo);
+    /*letter-spacing: 0.30em;*/
+    word-spacing: 0.60em;
+    font-size: 4.5rem;
+    text-shadow: black 3px 3px, black -3px 3px,black 3px -3px,black -3px -3px;   
+    
+
+}
+.menu{
+    font-family: 'Lobster', cursive;
+    font-size: x-large;
+}
+#tienda{
+    /*font-style: italic;*/
+    font-weight: bolder;
+    color: rgb(167 86 195 / 75%);
+    font-size: 3rem;
+    margin: auto;
+    
+}
+.carrito{
+    display: none;
+}
+
+
+
