@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carro de Compras</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1 class="nombre-negocio">My Sweet Sebastian</h1>
+            <span  id="tienda">Dessert Shop</span>
+          </div>          
+    </header>
+    <main>
+        <div class="menu-navegacion">
+            <nav class="menu" >
+              <a href="index.html">Tortas</a>
+              <a href="*">Postres</a>
+              <a href="*">Contactos</a>
+              <a  href="carroCompras.html" onclick="mostrarCarrito()"> <img class="iconCarrito" src="../src/imagenes/bx-cart.svg"></a>
+            </nav>
+        </div>
+        <div class="contenedor">
+            <section class="tarjeta" id="tarjeta">
+                <div class="delantera">
+                    <div class="logo-marca">
+                        <img src="imagenes/visa.png" alt="">
+                    </div>
+                    <img src="imagenes/chip-tarjeta.png" class="chip" alt="">
+                    <div class="datos">
+                        <div class="grupo" id="numero">
+                            <p class="label" >Numero de Tarjeta</p>
+                            <p class="numero">####################</p>
+                        </div>
+                        <div class="flexbox">
+                            <div class="grupo" id="nombre">
+                                <p class="label">Nombre Tarjeta</p>
+                                <p class="nombre">**************</p>
+                            </div>
+                            <div class="grupo" id="expiracion">
+                                <p class="label">Expiracion</p>
+                                <p class="expiracion"><span class="mes">MM</span>/<span class="year">AA</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="trasera">
+                    <div class="barra-magnetica"></div>
+                    <div class="datos">
+                        <div class="grupo" id="firma">
+                            <p class="label" >Firma</p>
+                            <div class="firma"><p></p></div>
+                        </div>
+                        <div class="grupo" id="cvv">
+                            <p class="label">cvv</p>
+                            <p class="cvv"></p>                            
+                        </div>
+                    </div>  
+                    <p class="leyenda">Nunc a posuere odio. Vestibulum facilisis leo vitae velit fringilla bibendum. </p>
+                    <a href="*" class="link-banco">www.tubanca.com</a>  
+                </div>           
+            </section>
+            <div class="contenedor-boton">
+                <button class="btn-formulario" id="btn-formulario">
+                    <!--<i class="fas fa-plus"></i>-->
+                    <img class="icono" src="./imagenes/bx-message-square-add.svg" alt="">
+                </button>
+            </div>
+            <section class="formulario">
+
+
+            </section>
+        </div>
+    </main>
+    <footer></footer>
+    <script src="index.js" type="module"></script>
+</body>
+</html>
