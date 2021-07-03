@@ -25,8 +25,7 @@ body{
 .logo{
     
     text-align: center;
-    /*width: 120rem;*/
-    height: 13rem; 
+    width: 90%;
 	background-image: url("/src/imagenes/logo.jfif");
     border-radius: 50%;
     background-position-x: center;
@@ -49,8 +48,8 @@ h1{
     color: var(--color-titulo);
     /*letter-spacing: 0.30em;*/
     word-spacing: 0.60em;
-    font-size: 4.2rem;
-    text-shadow: black 3px 3px, black -3px 3px,black 3px -3px,black -3px -3px;   
+    font-size: 6.2rem;
+    text-shadow: 3px 3px 30px black, black -3px 3px 30px,black 3px -3px 30px,black -3px -3px 30px;   
     
 
 }
@@ -61,7 +60,7 @@ h1{
 }
 .menu-navegacion{
     font-family: 'Lobster', cursive;
-    font-size: x-large;
+    font-size: 4rem;
     /*color: var(--color-titulo);
     text-decoration: none;*/
     background-color: var(--color-secciones);
@@ -72,16 +71,20 @@ h1{
 .menu-navegacion a{
     color: var(--color-titulo);
     text-decoration: none;
-    padding: 1rem;
+    padding: 2rem;
 
 }
-/*.iconCarrito{
-    width: 4rem;
-    height: 4rem;
-}*/
-.menu a :hover{
-    background-color: rgb(247, 187, 224);
+
+.menu-navegacion .menu a:hover{
+
+    background-color: rgb(185, 182, 182);
+
 }
+.iconCarrito{
+    width: 50px;
+    height: 50px;
+}
+
 #tienda{
     /*font-style: italic;*/
     font-weight: bolder;
@@ -255,7 +258,7 @@ h1{
 	height: 50px;
 	font-size: 20px;
 	line-height: 20px;
-	background: #2364d2;   
+	background: var(--color-secciones);   
 	color: rgb(245, 239, 239);
 	position: relative;
 	top: -25px;
@@ -284,12 +287,100 @@ h1{
 	transform: rotate(45deg);
 }
 
+.contenedor-product{
+
+    width: 80%;
+    margin: auto;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    background-color: var(--color-secciones);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contenedor-product .fila{
+
+    width: 80%;
+    margin: auto;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.contenedor-product .img-product{
+
+    width: 30rem;
+    height: 30rem;
+    background-size: cover;
+    border-style:double;
+    border-color: black;
+}
+
+.contenedor-product .fila .producto{
+
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+
+}
+
+.contenedor-product .fila .producto .datos-product{
+
+    /*width: 100%;*/
+    font-size: 2.5rem;
+    color: var(--color-titulo);
+    display: flex;
+    flex-direction: column;
+    /*justify-content: space-between;
+    align-content: center;
+    margin: auto;
+    margin-top: 0.5rem;*/
+    padding: 2rem;
+
+}
+
+.contenedor-product .fila .producto .datos-product span{
+
+        margin: auto;
+}
+
+.carrito-add{
+
+    width: 60%;
+    height: 6rem;
+    background-color: var(--color-secciones);
+    border: none;
+    border-radius: 5%;
+    box-shadow: 0 12px 30px rgb(0, 0, 0, 7);
+    margin: auto;
+    cursor: pointer;
+}
+
+.carrito-add:hover{
+    background-color: gray;
+}
+
+
+
+.carrito-add img{
+
+    width: 5rem;
+    height: 5rem;
+    background-size: contain;
+}
+
+
 footer{
 
     margin: auto;
     margin-top: 1rem;
     width: 90%;
-    height: 4rem;
+    height: 5rem;
     background-color: var(--color-secciones);
     padding: 0.5rem;
     border-color: rgb(167, 86, 195);

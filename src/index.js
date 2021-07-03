@@ -17,7 +17,4 @@ botonabrir.addEventListener('click', ()=> {
 })
 
 
-
-
-
 console.log(validator);
