@@ -2,6 +2,7 @@ const tarjeta = document.querySelector("#tarjeta"),
       botonabrir=document.querySelector("#btn-formulario"),
       formulario=document.querySelector(".formulario"),
       inputNumTarjeta=document.getElementById("numeroTarjeta");
+var  realNumeroTarjeta="";
 
 
 tarjeta.addEventListener('click', () => {
@@ -24,12 +25,19 @@ function validarTarjeta(){
     if(isNaN(numnuevo))
         document.getElementById("numeroTarjeta").value="**";
     document.getElementById("numeroTarjeta").value=numnuevo;
+    var esvalida=isValid(realNumeroTarjeta);
+    if(esvalida)
+        console.log("es una tarjeta valida");
+    else console.log("la tarjeta no es valida");
+
     //console.log(nuevaCadena);
     //console.log("regrese de maskify: "+numnuevo);
     //console.log(numnuevo.length);
     //return false;
 
 }
+
+
 /*
 formulario.numeroTarjeta.addEventListener('keyUp', (e) =>{
 
@@ -40,11 +48,26 @@ formulario.numeroTarjeta.addEventListener('keyUp', (e) =>{
 })*/
 
 
-function isValid(){
-    let siEsValida=false;
+function isValid(digitosTarj){
+    
+    let suma=0;
     console.log("aca validamos la tarjeta");
-  
-    return siEsValida;
+    let numInvertido=digitosTarj.split('').reverse();
+    console.log("inverti la cadena: "+numInvertido);
+    for(let i=0;i<numInvertido.length;i++){  
+        var num=parseInt(numInvertido[i]);      
+        if(i%2==0){
+            if((num*2)>9)
+                suma+=num*2-9;
+            suma+=num*2;
+        }
+        else{
+            suma+=num;
+        }
+    }
+    if(suma%10==0)
+        return true
+    return false;
 }
   
 function maskify(crediCardNumber){
@@ -52,7 +75,7 @@ function maskify(crediCardNumber){
     let ultimosDigitos="";
     let cadenatrasform="";
 
-    let nuevaCadena=crediCardNumber
+    var nuevaCadena=crediCardNumber
     //eliminar espacios en blanco
     .replace(/\s/g, '')
 	// Eliminar las letras
@@ -68,6 +91,7 @@ function maskify(crediCardNumber){
         alert("Faltan digitos del numero de Tarjeta");
         return "";
     }else{
+        realNumeroTarjeta=nuevaCadena;
         document.getElementById("dNumero").innerHTML=nuevaCadena.replace(/([0-9]{4})/g, '$1 ');
         cadenatrasform=nuevaCadena.slice(0,-4);
         console.log("primera parte:"+cadenatrasform);
@@ -84,3 +108,6 @@ function maskify(crediCardNumber){
     //console.log("trasforme la cadena"+cadenatransform);
   
 }
+
+console.log(this.isValid("4083952015263"));
+console.log(this.maskify("4556364607935616"));

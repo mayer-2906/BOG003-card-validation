@@ -427,7 +427,7 @@ footer{
 
 .datosForm{
     
-    /*width: 50%;*/
+    width: 100%;
     padding-top: 10px;
     padding-bottom: 10px;
     display: flex;    
@@ -436,18 +436,19 @@ footer{
 
 }
 
-#datos-numero{
+#datosNumero{
     margin-top: 40px;
     flex-direction: column;
 }
 
-#datos-nombre{
+#datosNombre{
 
     flex-direction: column;
 }
-.datos label{
+.datosForm label{
+    width: 100%;
     font-weight: bolder;
-    font-size: 16px;
+    font-size: 20px;
     padding: 5px;
     text-transform: capitalize;
 
@@ -456,15 +457,22 @@ footer{
     width: 70%;
     flex-direction: column;
 }
-.datos input{
+.datosForm input{
 
-    width: 250px;
-    height: 40px;
+    /*width: 100%;*/
+    height: 50px;
     font-size: 18px;
     text-transform: uppercase;
+    border: 2px solid #CED6E0;
+	/*font-size: 18px;
+	height: 50px;
+	width: 100%;*/
+	padding: 5px 12px;
+	transition: .3s ease all;
+	border-radius: 5px;
 }
 
-.datos .expira-cvv{
+.datosForm .expira-cvv{
 
     width: 100%;
     display: flex;
@@ -475,6 +483,7 @@ footer{
 .expira-cvv input{
 
     width: 120px;
+    height: 40px;
 }
 
 .expiracion{
@@ -484,8 +493,8 @@ footer{
 }
 .expiracion select{
 
-    width: 16rem;
-    height: 3rem;
+    width: 50%;
+    height: 5rem;
 
 }
 .cvv{
