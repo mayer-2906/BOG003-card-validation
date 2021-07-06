@@ -63,7 +63,7 @@ function validarTarjeta(){
         if(esvalida){
             document.getElementById("dNumero").innerHTML=realNumeroTarjeta.replace(/([0-9]{4})/g, '$1 ');
             document.getElementById("numeroTarjeta").value=numEnmascado;
-            titular.innerHTML=document.getElementById("nombreT");
+            document.getElementById("dNombre").innerHTML=document.querySelector("#nombreT").value;
             alert("es una tarjeta valida");
             //console.log("es una tarjeta valida");}
         }

@@ -36,7 +36,7 @@ body{
     border-style: double;
     margin-left: auto;
     margin-right: auto; 
-    text-shadow: black 3px 3px, black -3px 3px,black 3px -3px, black -3px -3px; 
+    /*text-shadow: black 3px 3px, black -3px 3px,black 3px -3px, black -3px -3px; */
     
     
 }
@@ -130,6 +130,19 @@ h1{
     justify-content: space-around;
     font-size: x-large;
     text-transform: capitalize;
+}
+
+#pagar{
+
+    width: 40%;
+    height: 50px;
+    cursor: pointer;
+    box-shadow: 3px 3px 30px rgb(236, 231, 231);
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: x-large;
+    font-family: 'Lobster', cursive;
 }
 /*
 .detallesProducto{
@@ -468,6 +481,11 @@ footer{
 	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
+.contenedor-formulario{
+    align-content: center;
+    justify-content: center;
+}
+
 .datosForm{
     
     width: 100%;
@@ -548,8 +566,13 @@ footer{
 
 }
 
-.botonValidar{
+.contenedor-formulario{
+    align-content: center;
+    justify-content: center;
+}
 
+#botonEnviarDatos{
+    position: relative;
     width: 250px;
     height: 50px;
     margin: auto;
@@ -557,6 +580,11 @@ footer{
     box-shadow: rgb(0,0, 0,0.5) 10px 10px 20px,rgb(0,0, 0,0.5) -10px 10px 20px;
     border-style: none;
     border-radius: 5%;
+    cursor: pointer;
+    font-family: 'Lobster', cursive;
+    font-size: x-large;
+    align-content: center;
+    justify-content: center;
 }
 
 
