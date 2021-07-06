@@ -27,15 +27,19 @@
             </nav>
         </div>
         <div class="facturacion flexbox">
-            <div class="detallesProducto">
+            <div class="detallesProducto flexbox">
                 <p>detalle</p>
-                <div class="itemsComprados">
-
-                </div>
+                <p>precios</p>                
             </div>
-            <div class="preciosProductos">
-                <p>precios</p>
+            <div class="itemsProductos">
+                <p class="productoComprado">TORTA CHOCOLATE</p>
+                <p class="precioProductComp">$ 50.000</p>
             </div>
+            <div class="totalPagar">
+                <p class="labelTotal">total a pagar</p>
+                <p class="totalCompra">50000</p>
+            </div>
+            <input type="button" value="PAGAR">
         </div>
         <div class="contenedor">
             <section class="tarjeta" id="tarjeta">
@@ -52,7 +56,7 @@
                         <div class="flexbox">
                             <div class="grupo" id="nombre">
                                 <p class="label">Nombre Tarjeta</p>
-                                <p class="nombre">**************</p>
+                                <p class="nombre" id="dNombre">**************</p>
                             </div>
                             <div class="grupo" id="expiracion">
                                 <p class="label">Expiracion</p>
@@ -130,7 +134,7 @@
                             <input id="numCvv" type="number" max="3" placeholder="***">
                         </div>
                    </div> 
-                   <!--<input type="submit" value="validar" id="botonEnviarDatos">  -->               
+                   <input type="button" value="validar" id="botonEnviarDatos">               
                 </form>
                <!--- <button type="submit" class="botonValidarC"" value="Validar" onclick="validarTarjeta()">Validar Tarjeta</button>-->
             </div>

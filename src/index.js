@@ -7,8 +7,10 @@ import validator from './validator.js';
 const tarjeta = document.querySelector("#tarjeta"),
       botonabrir=document.querySelector("#btn-formulario"),
       formulario=document.querySelector("#formulario1"),
-      botonValidar=document.getElementsByClassName("botonValidarC"),
-      inputNumTarjeta=document.querySelector("#numeroTarjeta");
+      titular=document.querySelector("#dNombre"),
+      botonEnviarDatos=document.getElementById("botonEnviarDatos");
+      //botonValidar=document.getElementsByClassName("botonValidarC"),
+      //inputNumTarjeta=document.querySelector("#numeroTarjeta");
 var   realNumeroTarjeta="";
 
 tarjeta.addEventListener('click', () => {
@@ -24,7 +26,7 @@ botonabrir.addEventListener('click', ()=> {
 inputNumTarjeta.addEventListener('click',()=>{
     validarTarjeta();
 })*/
-
+/*
 botonValidar.addEventListener('click', ()=>{
 
     document.getElementById("dnumero").innerHTML=inputNumTarjeta;
@@ -34,6 +36,10 @@ botonValidar.addEventListener('click', ()=>{
     //console.log("regrese de maskify: "+numnuevo);
     //console.log(numnuevo.length);
     //return false;
+})*/
+botonEnviarDatos.addEventListener('click', ()=>{
+    validarTarjeta();
+    //return false;
 })
 
 
@@ -41,20 +47,32 @@ function validarTarjeta(){
     var numtarjeta=document.getElementById("numeroTarjeta").value;
     //*let numeroTarj=numtarjeta.value;
     //console.log("estoy en validarTarjeta: "+numtarjeta);
-    var numnuevo=validator.maskify(numtarjeta);
+    //var numnuevo=validator.maskify(numtarjeta);
+    realNumeroTarjeta=numtarjeta.replace(/\D/g,"").replace(/\s/g,"");
     //console.log("volvi a validarTarjeta: "+numnuevo);
-    if(isNaN(numnuevo))
-        document.getElementById("numeroTarjeta").value="**";
-    document.getElementById("numeroTarjeta").value=numnuevo;
-    var esvalida=validator.isValid(realNumeroTarjeta);
-    if(esvalida){
-        alert("es una tarjeta valida");
-        //console.log("es una tarjeta valida");}
+    if(isNaN(realNumeroTarjeta)){
+        document.getElementById("numeroTarjeta").value="";
+        alert("tarjeta no valida");
+        return;
     }
-    else {
-        alert("es una tarjeta no valida");
-        //console.log("la tarjeta no es valida");
+    else{
+
+    //document.getElementById("numeroTarjeta").value=numnuevo;        
+        var numEnmascado=validator.maskify(realNumeroTarjeta);
+        var esvalida=validator.isValid(realNumeroTarjeta);
+        if(esvalida){
+            document.getElementById("dNumero").innerHTML=realNumeroTarjeta.replace(/([0-9]{4})/g, '$1 ');
+            document.getElementById("numeroTarjeta").value=numEnmascado;
+            titular.innerHTML=document.getElementById("nombreT");
+            alert("es una tarjeta valida");
+            //console.log("es una tarjeta valida");}
+        }
+        else {
+            alert("es una tarjeta no valida");
+            //console.log("la tarjeta no es valida");
+        }
     }
+    //return false;
 }
 
 
